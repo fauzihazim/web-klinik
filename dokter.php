@@ -40,25 +40,18 @@
     <div id="navbar"></div>
     <h2 class="m-10">Tambah Data Dokter</h2>
     <form class="mt-30" action="controller/dokter/createDokter.php" method="post">
-        <!-- <label for="namaDokter">Nama Dokter:</label>
-        <input type="text" id="namaDokter" name="namaDokter"><br><br> -->
         <div class="input-group mb-3 start-50 translate-middle" style="width: 80%;">
             <span class="input-group-text" for="namaDokter">Nama Dokter :</span>
             <input type="text" class="form-control" id="namaDokter" name="namaDokter" placeholder="namaDokter" aria-label="namaDokter" aria-describedby="basic-addon1">
         </div>
-        <!-- <label for="spesialisasi">Spesialisasi:</label>
-        <input type="text" id="spesialisasi" name="spesialisasi"><br><br> -->
         <div class="input-group mb-3 start-50 translate-middle" style="width: 80%;">
             <span class="input-group-text" for="spesialisasi">Spesialisasi :</span>
             <input type="text" class="form-control" id="spesialisasi" name="spesialisasi" placeholder="spesialisasi" aria-label="spesialisasi" aria-describedby="basic-addon1">
         </div>
-        <!-- <label for="harga">Harga Konsultasi:</label>
-        <input type="number" id="harga" name="harga"><br><br> -->
         <div class="input-group mb-3 start-50 translate-middle" style="width: 80%;">
             <span class="input-group-text" for="harga">Harga Konsultasi :</span>
             <input type="number" class="form-control" id="harga" name="harga" placeholder="harga" aria-label="harga" aria-describedby="basic-addon1">
         </div>
-        <!-- <input type="submit" value="Create"> -->
         <input class="btn btn-primary m-10" type="submit" value="Create">
     </form>
     <tbody>

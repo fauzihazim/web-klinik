@@ -33,8 +33,8 @@
             <td>".$row["stokObat"]."</td>
             <td>".$row["harga"]."</td>
             <td>
-                <a href='./controller/obat/deleteObat.php?id=".$row["idObat"]."' onclick='return confirm(\"Apakah Anda yakin ingin menghapus data ini?\")'>Hapus</a>
-                <a href='./controller/obat/editObat.php?id=".$row["idObat"]."'>Edit</a>
+                <a class='btn btn-danger' href='./controller/obat/deleteObat.php?id=".$row["idObat"]."' onclick='return confirm(\"Apakah Anda yakin ingin menghapus data ini?\")'>Hapus</a>
+                <a class='btn btn-primary' href='./controller/obat/editObat.php?id=".$row["idObat"]."'>Edit</a>
             </td>";
             // echo "<td><a href='./controller/obat/editObat.php?id=".$row["idObat"]."'>Edit</a></td></tr>";
         }
