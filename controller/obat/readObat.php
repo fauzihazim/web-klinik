@@ -15,10 +15,28 @@
     $sql = "SELECT * FROM obat";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
-        echo "<table border='1'><tr><th>ID</th><th>Nama Obat</th><th>Stok Obat</th><th>Harga</th><th>Actions</th></tr>";
+        echo "<table border='1' class='table'>";
+        echo "
+        <thead>
+            <tr class='table-primary'>
+                <th>ID</th>
+                <th>Nama Obat</th>
+                <th>Stok Obat</th>
+                <th>Harga</th>
+                <th>Actions</th>
+            </tr>
+        </thead>";
         while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["idObat"]."</td><td>".$row["namaObat"]."</td><td>".$row["stokObat"]."</td><td>".$row["harga"]."</td><td><a href='./controller/obat/deleteObat.php?id=".$row["idObat"]."' onclick='return confirm(\"Apakah Anda yakin ingin menghapus data ini?\")'>Hapus</a></td></tr>";
-            echo "<td><a href='./controller/obat/editObat.php?id=".$row["idObat"]."'>Edit</a></td></tr>";
+            echo "<tr>
+            <td>".$row["idObat"]."</td>
+            <td>".$row["namaObat"]."</td>
+            <td>".$row["stokObat"]."</td>
+            <td>".$row["harga"]."</td>
+            <td>
+                <a href='./controller/obat/deleteObat.php?id=".$row["idObat"]."' onclick='return confirm(\"Apakah Anda yakin ingin menghapus data ini?\")'>Hapus</a>
+                <a href='./controller/obat/editObat.php?id=".$row["idObat"]."'>Edit</a>
+            </td>";
+            // echo "<td><a href='./controller/obat/editObat.php?id=".$row["idObat"]."'>Edit</a></td></tr>";
         }
         echo "</table>";
     } else {

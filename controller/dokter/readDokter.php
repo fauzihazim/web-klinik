@@ -16,7 +16,16 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "<table border='1'><tr><th>ID</th><th>Nama</th><th>Spesialisasi</th><th>Created At</th></tr>";
+        echo "<table border='1' class='table'>";
+        echo "
+        <thead>
+            <tr class='table-primary'>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Spesialisasi</th>
+                <th>Created At</th>
+            </tr>
+        </thead>";
         while($row = $result->fetch_assoc()) {
             echo "<tr><td>".$row["idDokter"]."</td><td>".$row["namaDokter"]."</td><td>".$row["spesialisasi"]."</td><td>".$row["created_at"]."</td></tr>";
         }

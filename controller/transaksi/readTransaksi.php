@@ -44,8 +44,8 @@ GROUP BY
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table border='1'>
-            <tr>
+    echo "<table border='1' class='table'>
+            <tr class='table-primary'>
                 <th>idTransaksi</th>
                 <th>nama pasien</th>
                 <th>nama dokter</th>
@@ -56,7 +56,8 @@ if ($result->num_rows > 0) {
                 <th>create_at</th>
             </tr>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr>
+        echo "
+            <tr>
                 <td>" . $row["idTransaksi"] . "</td>
                 <td>" . $row["namaPasien"] . "</td>
                 <td>" . $row["namaDokter"] . "</td>
@@ -65,7 +66,7 @@ if ($result->num_rows > 0) {
                 <td>" . $row["diagnosa"] . "</td>
                 <td>" . $row["catatan"] . "</td>
                 <td>" . $row["create_at"] . "</td>
-              </tr>";
+            </tr>";
     }
     echo "</table>";
 } else {
