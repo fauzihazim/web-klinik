@@ -55,7 +55,7 @@ $conn->close();
         <i class="bi bi-chevron-left"></i> Back
     </a>
     <h2>Edit Obat</h2>
-    <form action="editObat.php" method="post">
+    <form class="mt-30" action="editObat.php" method="post">
         <input type="hidden" name="idObat" value="<?php echo $obat['idObat']; ?>">
         <div class="input-group mb-3 start-50 translate-middle" style="width: 80%;">
             <span class="input-group-text" for="namaObat">Nama Obat :</span>

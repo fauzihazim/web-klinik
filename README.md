@@ -1,11 +1,21 @@
 # **Web Klinik**
 Web Klinik adalah sebuah platform untuk layanan dasar klinik yang memfasilitasi pembuatan resep dan pemeriksaan pasien, registrasi pasien, serta pencatatan masuk obat dan keluar.
 
+## Tampilan
+| Tampilan desktop |  Tampilan mobile  | Right | URL | Keterangan |
+|:-----|:--------:|------:|------:|------:|
+| ![Halaman Desktop Tambah Data Pasien](https://s6.imgcdn.dev/Yjw9sv.png) | ![Halaman Mobile Tambah Data Pasien](https://s6.imgcdn.dev/YjwR2N.png) | Halaman Tambah Data Pasien | http://localhost/webklinik/ | Pada halaman ini memungkinkan untuk menambah data pasien |
+| ![Halaman Desktop Tambah Data Dokter](https://s6.imgcdn.dev/YjwdLL.png) | ![Halaman Mobile Tambah Data Dokter](https://s6.imgcdn.dev/YjwVHq.png) | Halaman tambah data dokter | http://localhost/webklinik/dokter.php | Pada halaman ini memungkinkan untuk menambah data dokter |
+| ![Halaman Desktop Tambah Data Obat](https://s6.imgcdn.dev/YjwL6a.png) |  ![Halaman Mobile Tambah Data Obat](https://s6.imgcdn.dev/YjwtIB.png)  | Halaman tambah obat | http://localhost/webklinik/obat.php | Pada halaman ini memungkinkan untuk menambahkan data obat, serta terdapat pilihan tombol untuk menghapus dan masuk ke halaman edit obat |
+| ![Halaman Desktop Edit Data Obat](https://s6.imgcdn.dev/YjwH29.png) |  ![Halaman Mobile edit Data Obat](https://s6.imgcdn.dev/YjwXXy.png)  | Halaman edit obat | - | Pada halaman ini memungkinkan untuk mengedit data obat |
+| ![Halaman Desktop Tambah Data Transaksi](https://s6.imgcdn.dev/Yjwblw.png) |  ![Halaman Mobile Tambah Transaksi](https://s6.imgcdn.dev/YjwWBu.png)  | Halaman transaksi klinik | http://localhost/webklinik/transaksi.php | Halaman ini memungkinkan untuk menambahkan transaksi, tombol "Add Obat" memungkinkan untuk menambahkan lebih dari satu obat |
+
 ## Teknologi
 - MySql
 - PHP
 - HTML
 - CSS
+- Bootstrap 5.3
 
 ## Fitur Utama
 1. **Registrasi Pasien**

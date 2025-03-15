@@ -15,7 +15,8 @@
 
                 // Determine the current page
                 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
+                console.log(currentPage);
+                
                 // Map of page names to nav item IDs
                 const pageToNavId = {
                     'index.html': 'nav-pasien',
