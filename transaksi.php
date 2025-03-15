@@ -85,10 +85,7 @@
 <body>
     <div id="navbar"></div>
     <h1>Transaksi Klinik</h1>
-    <!-- <h2>Select a obat</h2> -->
-    <form action="controller/transaksi/createTransaksi.php" method="post">
-        <!-- <label for="pasien">Nama Pasien:</label> -->
-        
+    <form class="mt-30" action="controller/transaksi/createTransaksi.php" method="post">
         <div class="input-group mb-3 start-50 translate-middle dropdown" style="width: 80%;">
             <span class="input-group-text" for="pasien">Nama Pasien :</span>
             <select id="pasien" class="form-control" name="pasien">
@@ -101,9 +98,6 @@
                 <?php include 'controller/transaksi/fetchDokter.php'; ?>
             </select>
         </div>
-        <!-- <label for="obat">Nama Obat 1: </label>
-        <select id="obat" name="obat[]">
-        </select> <br> -->
         <div class="input-group mb-3 start-50 translate-middle dropdown" style="width: 80%;">
             <span class="input-group-text" for="obat">Nama Obat :</span>
             <select id="obat" class="form-control" name="obat[]">
@@ -114,15 +108,10 @@
         <div class="mb-3">
             <button class="btn btn-primary m-10" type="button" onclick="addDropdown()">Add Obat</button><br><br>
         </div>
-        <!-- <label for="diagnosa">Diagnosa:</label>
-        <input type="text" id="diagnosa" name="diagnosa"><br><br> -->
         <div class="input-group mb-3 start-50 translate-middle" style="width: 80%;">
             <span class="input-group-text" for="diagnosa">Diagnosa :</span>
             <input type="text" class="form-control" id="diagnosa" name="diagnosa" placeholder="diagnosa" aria-label="diagnosa" aria-describedby="basic-addon1">
         </div>
-        <!-- <label for="catatan">Catatan:</label> -->
-        <!-- <input type="text" id="catatan" name="catatan"><br><br>
-        <input type="submit" value="Submit"> -->
         <div class="input-group mb-3 start-50 translate-middle" style="width: 80%;">
             <span class="input-group-text" for="catatan">Catatan :</span>
             <input type="text" class="form-control" id="catatan" name="catatan" placeholder="catatan" aria-label="catatan" aria-describedby="basic-addon1">
