@@ -23,11 +23,12 @@
                 <th>ID</th>
                 <th>Nama</th>
                 <th>Spesialisasi</th>
+                <th>Harga</th>
                 <th>Created At</th>
             </tr>
         </thead>";
         while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["idDokter"]."</td><td>".$row["namaDokter"]."</td><td>".$row["spesialisasi"]."</td><td>".$row["created_at"]."</td></tr>";
+            echo "<tr><td>".$row["idDokter"]."</td><td>".$row["namaDokter"]."</td><td>".$row["spesialisasi"]."</td><td>".$row["harga"]."</td><td>".$row["created_at"]."</td></tr>";
         }
         echo "</table>";
     } else {
