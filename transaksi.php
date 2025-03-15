@@ -8,19 +8,47 @@
     <title>Web Klinik | Transaksi</title>
     <script> 
         let counter = 2; // Initialize counter
-        function addDropdown() { 
+        // function addDropdown() { 
+        //     var container = document.getElementById('dropdownContainer');
+        //     // Create a new label
+        //     var newLabel = document.createElement('label');
+        //     newLabel.innerText = `Nama Obat ${counter}: `;
+        //     newLabel.classList.add('custom-label-class');
+        //     container.appendChild(newLabel);
+        //     // Create a new dropdown
+        //     var newDropdown = document.createElement('select');
+        //     newDropdown.name = 'obat[]';
+        //     newDropdown.innerHTML = '<?php include 'controller/transaksi/fetchObat.php'; ?>';
+        //     container.appendChild(newDropdown);
+        //     container.appendChild(document.createElement('br')); // Add a line break for
+        //     counter++; // Increment
+        // }
+        function addDropdown() {
             var container = document.getElementById('dropdownContainer');
-            // Create a new label
-            var newLabel = document.createElement('label');
-            newLabel.innerText = `Nama Obat ${counter}: `;
-            container.appendChild(newLabel);
-            // Create a new dropdown
+
+            // Create the input group div
+            var inputGroupDiv = document.createElement('div');
+            inputGroupDiv.className = 'input-group mb-3 start-50 translate-middle dropdown';
+            inputGroupDiv.style.width = '80%';
+
+            // Create the span for the input group text
+            var span = document.createElement('span');
+            span.className = 'input-group-text';
+            span.innerText = `Nama Obat ${counter}: `;
+            inputGroupDiv.appendChild(span);
+
+            // Create the dropdown (select element)
             var newDropdown = document.createElement('select');
+            newDropdown.className = 'form-control';
             newDropdown.name = 'obat[]';
             newDropdown.innerHTML = '<?php include 'controller/transaksi/fetchObat.php'; ?>';
-            container.appendChild(newDropdown);
-            container.appendChild(document.createElement('br')); // Add a line break for
-            counter++; // Increment the
+            inputGroupDiv.appendChild(newDropdown);
+
+            // Append the input group div to the container
+            container.appendChild(inputGroupDiv);
+
+            // Increment the counter
+            counter++;
         }
     </script>
     <script>
@@ -52,31 +80,54 @@
                 }
             });
     </script>
+    <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 <body>
     <div id="navbar"></div>
     <h1>Transaksi Klinik</h1>
     <!-- <h2>Select a obat</h2> -->
     <form action="controller/transaksi/createTransaksi.php" method="post">
-        <label for="pasien">Nama Pasien:</label>
-        <select id="pasien" name="pasien">
-            <?php include 'controller/transaksi/fetchPasien.php'; ?>
-        </select> <br><br>
-        <label for="dokter">Nama Dokter:</label>
-        <select id="dokter" name="dokter">
-            <?php include 'controller/transaksi/fetchDokter.php'; ?>
-        </select> <br><br>
-        <label for="obat">Nama Obat 1: </label>
+        <!-- <label for="pasien">Nama Pasien:</label> -->
+        
+        <div class="input-group mb-3 start-50 translate-middle dropdown" style="width: 80%;">
+            <span class="input-group-text" for="pasien">Nama Pasien :</span>
+            <select id="pasien" class="form-control" name="pasien">
+                <?php include 'controller/transaksi/fetchPasien.php'; ?>
+            </select>
+        </div>
+        <div class="input-group mb-3 start-50 translate-middle dropdown" style="width: 80%;">
+            <span class="input-group-text" for="dokter">Nama Dokter :</span>
+            <select id="dokter" class="form-control" name="dokter">
+                <?php include 'controller/transaksi/fetchDokter.php'; ?>
+            </select>
+        </div>
+        <!-- <label for="obat">Nama Obat 1: </label>
         <select id="obat" name="obat[]">
-            <?php include 'controller/transaksi/fetchObat.php'; ?>
-        </select> <br>
+        </select> <br> -->
+        <div class="input-group mb-3 start-50 translate-middle dropdown" style="width: 80%;">
+            <span class="input-group-text" for="obat">Nama Obat :</span>
+            <select id="obat" class="form-control" name="obat[]">
+                <?php include 'controller/transaksi/fetchObat.php'; ?>
+            </select>
+        </div>
         <div id="dropdownContainer"></div>
-        <button type="button" onclick="addDropdown()">Add Obat</button><br><br>
-        <label for="diagnosa">Diagnosa:</label>
-        <input type="text" id="diagnosa" name="diagnosa"><br><br>
-        <label for="catatan">Catatan:</label>
-        <input type="text" id="catatan" name="catatan"><br><br>
-        <input type="submit" value="Submit">
+        <div class="mb-3">
+            <button class="btn btn-primary m-10" type="button" onclick="addDropdown()">Add Obat</button><br><br>
+        </div>
+        <!-- <label for="diagnosa">Diagnosa:</label>
+        <input type="text" id="diagnosa" name="diagnosa"><br><br> -->
+        <div class="input-group mb-3 start-50 translate-middle" style="width: 80%;">
+            <span class="input-group-text" for="diagnosa">Diagnosa :</span>
+            <input type="text" class="form-control" id="diagnosa" name="diagnosa" placeholder="diagnosa" aria-label="diagnosa" aria-describedby="basic-addon1">
+        </div>
+        <!-- <label for="catatan">Catatan:</label> -->
+        <!-- <input type="text" id="catatan" name="catatan"><br><br>
+        <input type="submit" value="Submit"> -->
+        <div class="input-group mb-3 start-50 translate-middle" style="width: 80%;">
+            <span class="input-group-text" for="catatan">Catatan :</span>
+            <input type="text" class="form-control" id="catatan" name="catatan" placeholder="catatan" aria-label="catatan" aria-describedby="basic-addon1">
+        </div>
+        <input class="btn btn-primary m-10" type="submit" value="Submit">
     </form>
     <tbody>
         <?php include 'controller/transaksi/readTransaksi.php';?>
