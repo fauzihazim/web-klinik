@@ -44,6 +44,7 @@ GROUP BY
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    echo "<div  class='overflow-x-scroll'>";
     echo "<table border='1' class='table'>
             <tr class='table-primary'>
                 <th>idTransaksi</th>
@@ -69,6 +70,7 @@ if ($result->num_rows > 0) {
             </tr>";
     }
     echo "</table>";
+    echo "</div>";
 } else {
     echo "0 results";
 }

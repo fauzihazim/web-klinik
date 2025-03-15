@@ -118,7 +118,7 @@
         </div>
         <input class="btn btn-primary m-10" type="submit" value="Submit">
     </form>
-    <tbody>
+    <tbody class='overflow-x-scroll'>
         <?php include 'controller/transaksi/readTransaksi.php';?>
     </tbody>
 </body>
