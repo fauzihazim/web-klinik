@@ -2,7 +2,7 @@
 Web Klinik adalah sebuah platform untuk layanan dasar klinik yang memfasilitasi pembuatan resep dan pemeriksaan pasien, registrasi pasien, serta pencatatan masuk obat dan keluar.
 
 ## Tampilan
-| Tampilan desktop |  Tampilan mobile  | Right | URL | Keterangan |
+| Tampilan desktop |  Tampilan mobile  | Nama halaman | URL | Keterangan |
 |:-----|:--------:|------:|------:|------:|
 | ![Halaman Desktop Tambah Data Pasien](https://s6.imgcdn.dev/Yjw9sv.png) | ![Halaman Mobile Tambah Data Pasien](https://s6.imgcdn.dev/YjwR2N.png) | Halaman Tambah Data Pasien | http://localhost/webklinik/ | Pada halaman ini memungkinkan untuk menambah data pasien |
 | ![Halaman Desktop Tambah Data Dokter](https://s6.imgcdn.dev/YjwdLL.png) | ![Halaman Mobile Tambah Data Dokter](https://s6.imgcdn.dev/YjwVHq.png) | Halaman tambah data dokter | http://localhost/webklinik/dokter.php | Pada halaman ini memungkinkan untuk menambah data dokter |
